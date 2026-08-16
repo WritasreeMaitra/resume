@@ -1,0 +1,240 @@
+:root{
+  --ink:#1B1F2B;
+  --paper:#F7F5F0;
+  --brass:#B08D57;
+  --slate:#5B6472;
+  --hairline:#D8D3C7;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+.page{
+  max-width:780px;
+  margin:0 auto;
+  padding:48px 32px 96px;
+}
+
+/* ---------- Nav ---------- */
+nav.sitenav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px 22px;
+  margin-bottom:40px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--hairline);
+}
+
+nav.sitenav a{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.76rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--slate);
+  text-decoration:none;
+  padding-bottom:2px;
+}
+
+nav.sitenav a:hover{ color:var(--ink); }
+
+nav.sitenav a.active{
+  color:var(--brass);
+  border-bottom:1px solid var(--brass);
+}
+
+/* ---------- Masthead ---------- */
+.masthead{ margin-bottom:8px; }
+
+.name{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:clamp(2.3rem, 6vw, 3.2rem);
+  letter-spacing:-0.01em;
+  line-height:1.05;
+}
+
+.role{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.8rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--brass);
+  margin-top:10px;
+}
+
+.affiliation{
+  color:var(--slate);
+  font-size:0.98rem;
+  margin-top:6px;
+}
+
+.contact{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  color:var(--slate);
+  margin-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 16px;
+}
+
+.contact a{ color:var(--slate); text-decoration:none; border-bottom:1px solid var(--hairline); }
+.contact a:hover{ color:var(--ink); border-color:var(--ink); }
+
+.summary{
+  margin-top:28px;
+  max-width:65ch;
+  font-size:1.02rem;
+}
+
+/* ---------- Page title (for non-home pages) ---------- */
+.page-title{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:clamp(1.8rem, 5vw, 2.4rem);
+  margin-bottom:40px;
+}
+
+section{ margin-top:44px; }
+section:first-of-type{ margin-top:0; }
+
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--slate);
+  padding-bottom:10px;
+  border-bottom:1px solid var(--hairline);
+  margin-bottom:22px;
+}
+
+/* ---------- Education rows ---------- */
+.edu-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:16px;
+  padding:10px 0;
+  border-bottom:1px solid var(--hairline);
+}
+.edu-row:last-child{ border-bottom:none; }
+
+.edu-degree{
+  font-family:'Fraunces', serif;
+  font-weight:500;
+  font-size:1.05rem;
+}
+
+.edu-inst{ color:var(--slate); font-size:0.92rem; margin-top:2px; }
+
+.edu-right{ text-align:right; white-space:nowrap; }
+
+.edu-date{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.76rem;
+  color:var(--brass);
+}
+
+.edu-cpi{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.7rem;
+  color:var(--slate);
+  margin-top:2px;
+}
+
+/* ---------- Lists ---------- */
+ul.bullets{ list-style:none; padding-left:1.1em; }
+
+ul.bullets li{
+  position:relative;
+  margin-bottom:12px;
+  font-size:0.95rem;
+}
+
+ul.bullets li::before{
+  content:"—";
+  position:absolute;
+  left:-1.1em;
+  color:var(--brass);
+}
+
+ul.bullets li .authors{ color:var(--slate); }
+
+ul.bullets li a.linkref{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  color:var(--brass);
+  text-decoration:none;
+  border-bottom:1px solid var(--brass);
+  margin-left:4px;
+  white-space:nowrap;
+}
+
+/* ---------- Row items (fellowships etc) ---------- */
+.row-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:16px;
+  padding:10px 0;
+  border-bottom:1px solid var(--hairline);
+}
+.row-item:last-child{ border-bottom:none; }
+
+.row-text{ font-size:0.95rem; max-width:58ch; }
+.row-date{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.74rem;
+  color:var(--brass);
+  white-space:nowrap;
+  text-align:right;
+}
+
+/* ---------- Skills ---------- */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:14px 32px;
+}
+.skill-group h4{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--slate);
+  margin-bottom:6px;
+}
+.skill-group p{ font-size:0.94rem; }
+
+footer{
+  margin-top:64px;
+  padding-top:20px;
+  border-top:1px solid var(--hairline);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.7rem;
+  color:var(--slate);
+  letter-spacing:0.04em;
+}
+
+@media (max-width: 560px){
+  .page{ padding:36px 20px 72px; }
+  .edu-row, .row-item{ flex-direction:column; align-items:flex-start; gap:2px; }
+  .edu-right{ text-align:left; }
+  .skills-grid{ grid-template-columns:1fr; }
+}
+
+@media print{
+  body{ background:#fff; }
+  .page{ padding:0; max-width:100%; }
+  a{ color:var(--ink) !important; }
+  nav.sitenav{ display:none; }
+}
