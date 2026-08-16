@@ -1,9 +1,9 @@
 :root{
-  --ink:#1B1F2B;
-  --paper:#F7F5F0;
-  --brass:#B08D57;
-  --slate:#5B6472;
-  --hairline:#D8D3C7;
+  --ink:#F0EEE6; 
+  --paper:#1B1F2B; 
+  --brass:#7FB8D9; 
+  --slate:#8B93A3; 
+  --hairline:#33394A;
 }
 
 *{box-sizing:border-box; margin:0; padding:0;}
